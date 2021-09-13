@@ -908,6 +908,14 @@
   "resolved" "https://registry.npmjs.org/@csstools/normalize.css/-/normalize.css-9.0.1.tgz"
   "version" "9.0.1"
 
+"@drizzle/react-components@^1.5.3":
+  "integrity" "sha512-i5k3sCSEHnIBBnhj+DNYy4jhovRuhwX6LLNDoJ/wPq/oZEN3AywGSMTPae5a+jAsJyj6yJJKoH9zceYrd3u17g=="
+  "resolved" "https://registry.npmjs.org/@drizzle/react-components/-/react-components-1.5.3.tgz"
+  "version" "1.5.3"
+  dependencies:
+    "prop-types" "^15.7.2"
+    "react" "^16.8.6"
+
 "@drizzle/react-plugin@^1.5.3":
   "integrity" "sha512-UT58IMGcSRk0Opcs7U29sEX1jWXaTNhE5RwHrHD6wTYv2zuS3bXfK3q+ojwLfWRnrcBn0MsulRm/FnJ3bD4TyQ=="
   "resolved" "https://registry.npmjs.org/@drizzle/react-plugin/-/react-plugin-1.5.3.tgz"
@@ -8945,7 +8953,7 @@
   optionalDependencies:
     "fsevents" "2.0.7"
 
-"react@^16.0.0", "react@16.11.0":
+"react@^16.0.0", "react@^16.8.6", "react@16.11.0":
   "integrity" "sha512-M5Y8yITaLmU0ynd0r1Yvfq98Rmll6q8AxaEe88c8e7LxO8fZ2cNgmFt0aGAS9wzf1Ao32NKXtCl+/tVVtkxq6g=="
   "resolved" "https://registry.npmjs.org/react/-/react-16.11.0.tgz"
   "version" "16.11.0"

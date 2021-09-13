@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 //Dizzle functions and contract artifacts
-import SimpleStorage from "./contracts/SimpleStorage.json";
+import List from "./contracts/List.json";
 import { Drizzle } from "@drizzle/store";
 import { DrizzleContext } from "@drizzle/react-plugin";
 
 const options = {
-  contracts: [SimpleStorage],
+  contracts: [List],
   web3: {
     fallback: {
       type: "ws",
@@ -18,6 +18,7 @@ const options = {
 };
 
 const drizzle = new Drizzle(options);
+
 ReactDOM.render(  
     <DrizzleContext.Provider drizzle={drizzle}>
       <DrizzleContext.Consumer>
@@ -27,7 +28,9 @@ ReactDOM.render(
             return "Loading..."
           }
           return (
-            <App drizzleState={drizzleState} />
+            <>
+              <App drizzle={drizzle} drizzleState={drizzleState} />
+            </>
             )
           }}
       </DrizzleContext.Consumer>
