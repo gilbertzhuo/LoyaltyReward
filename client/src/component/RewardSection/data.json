@@ -1,0 +1,15 @@
+{
+    "Reward": [{
+        "title": "Item A",
+        "price": "5 Points",
+        "description": "Helen and Ivan had the same number of coins. Helen had a number of 50-cent coins, and 64 20-cent coins. These coins had a mass of 1.134kg. Ivan had a number of 50-cent coins and 104 20-cent coins."
+    }, {
+        "title": "Item B",
+        "price": "3 Points",
+        "description": "Helen and Ivan had the same number of coins. Helen had a number of 50-cent coins, and 64 20-cent coins. These coins had a mass of 1.134kg. Ivan had a number of 50-cent coins and 104 20-cent coins."
+    }, {
+        "title": "Item C",
+        "price": "2 Points",
+        "description": "Helen and Ivan had the same number of coins. Helen had a number of 50-cent coins, and 64 20-cent coins. These coins had a mass of 1.134kg. Ivan had a number of 50-cent coins and 104 20-cent coins."
+    }]
+}
