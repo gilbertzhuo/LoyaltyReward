@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import App from './App';
 
 //Dizzle functions and contract artifacts
-import List from "./contracts/List.json";
+import LoyaltyReward from "./contracts/LoyaltyReward.json";
 import { Drizzle } from "@drizzle/store";
 import { DrizzleContext } from "@drizzle/react-plugin";
 
 const options = {
-  contracts: [List],
+  contracts: [LoyaltyReward],
   web3: {
     fallback: {
       type: "ws",

@@ -17,13 +17,13 @@ export default function App ({drizzle, drizzleState}){
         <div>
           <Switch>
             <Route path="/reward">
-              <Reward />
+              <Reward drizzle={drizzle} drizzleState={drizzleState}/>
             </Route>
             <Route path="/wallet">
-              <Wallet />
+              <Wallet drizzle={drizzle} drizzleState={drizzleState}/>
             </Route>
             <Route path="/">
-              <Home />
+              <Home drizzle={drizzle} drizzleState={drizzleState}/>
             </Route>
           </Switch>
         </div>
