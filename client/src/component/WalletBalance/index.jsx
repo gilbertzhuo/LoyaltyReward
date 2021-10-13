@@ -3,12 +3,10 @@ import {Container} from "./walletElements"
 
 const WalletBalance = ({drizzle, drizzleState}) => {
     const [balance, setBalance] = useState(0);
-    useEffect(() => {
-        
-    })
+   
     return (
         <Container>
-            <h3>Points: 0</h3>
+            <h3>Points: {balance}</h3>
         </Container>
     )
 }

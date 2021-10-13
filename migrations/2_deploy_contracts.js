@@ -1,5 +1,5 @@
-var List = artifacts.require("./List.sol");
+var LoyaltyReward = artifacts.require("./LoyaltyReward.sol");
 
 module.exports = function(deployer) {
-    deployer.deploy(List);
+    deployer.deploy(LoyaltyReward);
 };
