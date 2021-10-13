@@ -3,7 +3,7 @@ import {RewardContainer, RewardH1, RewardWrapper, RewardCard, RewardIcon, Reward
 import data from "./data.json";
 import icon from "../../images/bitcoin.svg";
 
-const RewardSection = () => {
+const RewardSection = ({drizzle, drizzleState}) => {
     return (
         <RewardContainer>
             <RewardH1>Reward Redemption</RewardH1>
@@ -14,10 +14,12 @@ const RewardSection = () => {
                             <RewardIcon src={icon}/>
                             <CardContainer>
                                 <RewardH2>{item.title}</RewardH2>
-                                <RewardH2 style={{color:"lightseagreen"}}>{item.price}</RewardH2>
+                                <RewardH2 style={{color:"lightseagreen"}}>{item.price} Points</RewardH2>
                             </CardContainer>
                             <RewardP>{item.description}</RewardP>
-                            <RewardButton>REDEEM</RewardButton>
+                            <RewardButton onClick={()=>{
+                                drizzle.contracts.LoyaltyReward.methods.ItemRedemption(item.price).send()
+                            }}>REDEEM</RewardButton>
                         </RewardCard>
                     )
                 })}

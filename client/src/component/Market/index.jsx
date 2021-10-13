@@ -3,7 +3,7 @@ import {MarketContainer, MarketH1, MarketWrapper, MarketCard, MarketIcon, Market
 import data from "./data.json";
 import icon from "../../images/bitcoin.svg";
 
-const Market = () => {
+const Market = ({drizzle, drizzleState}) => {
     return (
         <MarketContainer>
             <MarketH1>MARKETPLACE</MarketH1>
@@ -14,10 +14,12 @@ const Market = () => {
                             <MarketIcon src={icon}/>
                             <CardContainer>
                                 <MarketH2>{item.title}</MarketH2>
-                                <MarketH2 style={{color:"lightseagreen"}}>{item.price}</MarketH2>
+                                <MarketH2 style={{color:"lightseagreen"}}>{item.price} ETH</MarketH2>
                             </CardContainer>
                             <MarketP>{item.description}</MarketP>
-                            <MarketButton>BUY NOW</MarketButton>
+                            <MarketButton onClick={()=>{
+                                drizzle.contracts.LoyaltyReward.methods.buyItem.cacheSend({from: drizzleState.accounts[0], value: drizzle.web3.utils.toWei(item.price, 'ether')})
+                            }}>BUY NOW</MarketButton>
                         </MarketCard>
                     )
                 })}
